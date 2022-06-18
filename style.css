@@ -11,6 +11,17 @@ body {
   overflow-x: hidden;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .page-header {
   font-size: 22px;
   width: 1160px;
@@ -59,7 +70,7 @@ body {
 .page-title {
   font-size: 42px;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   margin-left: 30px;
 }
 
@@ -109,7 +120,10 @@ body {
   padding-bottom: 20px;
   border: 1px solid #f4e3e4;
   background-color: #faf1f1;
-  cursor: pointer;
+}
+
+.good-item:hover {
+  background-color: #f4e3e4;
 }
 
 .good-pic {
@@ -132,19 +146,47 @@ body {
   padding-right: 5px;
 }
 
+.amount-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+.good-amount-field {
+  width: 24px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.amount-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.amount-button:hover {
+  background-color: #faf1f1;
+}
+
 .order-button {
   position: sticky;
   top: 50px;
   box-sizing: border-box;
   display: block;
   width: 180px;
-  height: 60px;
+  height: 80px;
   margin: 0 auto;
   background-color: #f78f6c;
-  border: 3px solid #e9967a;
+  border: 3px solid #c5765c;
   border-radius: 20px;
   text-transform: uppercase;
   color: #8a3324;
+  font-size: 24px;
   cursor: pointer;
 }
 
@@ -154,7 +196,7 @@ body {
   height: 70px;
   margin: 0 auto;
   padding-left: 65px;
-  padding-right: 75px;
+  padding-right: 65px;
   padding-top: 10px;
   background-color: #453839;
   display: flex;
@@ -189,3 +231,98 @@ body {
   display: block;
   padding-top: 15px;
 }
+
+.modal-container {
+  position: fixed;
+  z-index: 10;
+  box-sizing: border-box;
+  top: 120px;
+  left: 27%;
+  width: 900px;
+  height: 550px;
+  padding: 50px;
+  background-color: #ffffff;
+  border: 5px solid #000000;
+}
+
+.modal-wrapper {
+  position: relative;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  right: 0;
+  width: 26px;
+  height: 26px;
+  padding: 20px;
+  background-color: #ffffff;
+  background-image: url("./img/icons/modal-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.order-form {
+  display: grid;
+  grid-template-columns: 385px 205px 150px;
+  gap: 40px 30px;
+}
+
+.form-label {
+  font-size: 22px;
+}
+
+.field {
+  margin-top: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px;
+}
+
+.field-group-name {
+  grid-column: 1 / 2;
+}
+
+.field-group-phone {
+  grid-column: 2 / -1;
+}
+
+.field-group-good {
+  grid-column: 1 / 2;
+}
+
+.field-group-number {
+  grid-column: 2 / 3;
+}
+
+.field-group-email {
+  grid-column: 1 / -1;
+}
+
+.form-submit-button {
+  grid-column: 1 / 2;
+
+  width: 250px;
+  height: 50px;
+    background-color: #f78f6c;
+  border: 3px solid #c5765c;
+  border-radius: 15px;
+  text-transform: uppercase;
+  color: #8a3324;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-container-close {
+  display: none;
+}
+
