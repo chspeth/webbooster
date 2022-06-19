@@ -38,7 +38,7 @@
                 <button class="amount-button minus-button">
                   <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="minus"><line class="cls-1" x1="7" x2="25" y1="16" y2="16"/></g></svg>
                 </button>
-                <input class="good-amount-field" type="number" placeholder="0" disabled>
+                <div class="good-amount">0</div>
                 <button class="amount-button plus-button">
                   <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="plus"><line class="cls-1" x1="16" x2="16" y1="7" y2="25"/><line class="cls-1" x1="7" x2="25" y1="16" y2="16"/></g></svg>
                 </button>
@@ -52,7 +52,7 @@
                 <button class="amount-button minus-button">
                   <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="minus"><line class="cls-1" x1="7" x2="25" y1="16" y2="16"/></g></svg>
                 </button>
-                <input class="good-amount-field" type="number" placeholder="0" disabled>
+                <div class="good-amount">0</div>
                 <button class="amount-button plus-button">
                   <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="plus"><line class="cls-1" x1="16" x2="16" y1="7" y2="25"/><line class="cls-1" x1="7" x2="25" y1="16" y2="16"/></g></svg>
                 </button>
@@ -66,7 +66,7 @@
                 <button class="amount-button minus-button">
                   <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="minus"><line class="cls-1" x1="7" x2="25" y1="16" y2="16"/></g></svg>
                 </button>
-                <input class="good-amount-field" type="number" placeholder="0" disabled>
+                <div class="good-amount">0</div>
                 <button class="amount-button plus-button">
                   <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="plus"><line class="cls-1" x1="16" x2="16" y1="7" y2="25"/><line class="cls-1" x1="7" x2="25" y1="16" y2="16"/></g></svg>
                 </button>
@@ -80,7 +80,7 @@
                 <button class="amount-button minus-button">
                   <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="minus"><line class="cls-1" x1="7" x2="25" y1="16" y2="16"/></g></svg>
                 </button>
-                <input class="good-amount-field" type="number" placeholder="0" disabled>
+                <div class="good-amount">0</div>
                 <button class="amount-button plus-button">
                   <svg width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="plus"><line class="cls-1" x1="16" x2="16" y1="7" y2="25"/><line class="cls-1" x1="7" x2="25" y1="16" y2="16"/></g></svg>
                 </button>
@@ -111,31 +111,31 @@
             <div class="field-group field-group-name">
               <label class="form-label">
                 Ваше имя:<br>
-                <input class="field" name="name" type="text" placeholder="Валерия" required>
+                <input class="field" id="name" name="name" type="text" placeholder="Валерия" minlength="1" required data-pristine-required-message="Обязательное поле">
               </label>
             </div>
             <div class="field-group field-group-phone">
               <label class="form-label">
                 Ваш телефон:<br>
-                <input class="field" name="phone" type="tel" placeholder="89999999999" required>
+                <input class="field" id="phone" name="phone" type="tel" placeholder="89999999999" minlength="11" required data-pristine-required-message="Обязательное поле">
               </label>
             </div>
             <div class="field-group field-group-good">
               <label class="form-label">
                 Товар:<br>
-                <input class="field" name="good" type="text" disabled>
+                <input class="field" id="good" name="good" type="text" disabled>
               </label>
             </div>
             <div class="field-group field-group-number">
               <label class="form-label">
                 Килограмм:<br>
-                <input class="field" name="number" type="number" placeholder="1">
+                <input class="field" id="number" name="number" type="number" placeholder="1">
               </label>
             </div>
             <div class="field-group field-group-email">
               <label class="form-label">
                 Ваш e-mail:<br>
-                <input class="field" name="e-mail" type="email" placeholder="ivanivanov@gmail.com">
+                <input class="field" id="email" name="e-mail" type="email" placeholder="ivanivanov@gmail.com" required data-pristine-required-message="Обязательное поле">
               </label>
             </div>
             <input class="form-submit-button" type="submit" name="submit-button">
@@ -143,5 +143,7 @@
         </section>
       </div>
     </div>
+    <script src="./pristine/pristine.min.js" type="text/javascript"></script>
+    <script src="./main.js" type="text/javascript"></script>
   </body>
 </html>

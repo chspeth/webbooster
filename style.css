@@ -153,13 +153,10 @@ body {
   margin-left: 5px;
 }
 
-.good-amount-field {
+.good-amount {
   width: 24px;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  padding-left: 10px;
   font-size: 16px;
+  text-align: center;
 }
 
 .amount-button {
@@ -236,7 +233,7 @@ body {
   position: fixed;
   z-index: 10;
   box-sizing: border-box;
-  top: 120px;
+  top: 105px;
   left: 27%;
   width: 900px;
   height: 550px;
@@ -313,7 +310,7 @@ body {
 
   width: 250px;
   height: 50px;
-    background-color: #f78f6c;
+  background-color: #f78f6c;
   border: 3px solid #c5765c;
   border-radius: 15px;
   text-transform: uppercase;
@@ -324,5 +321,9 @@ body {
 
 .modal-container-close {
   display: none;
+}
+
+.form-label_error-text {
+  font-size: 16px;
 }
 
