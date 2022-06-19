@@ -71,6 +71,7 @@ const pristine = new Pristine(form, {
 
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
+  ym(89242469,'reachGoal','goal');
 
   const isValid = pristine.validate();
   if (isValid) {
@@ -85,5 +86,18 @@ form.addEventListener('submit', (evt) => {
     );
 
     closeModal();
+
+    Email.send({
+      Host : "smtp.yourisp.com",
+      Username : "username",
+      Password : "password",
+      To : 'them@website.com',
+      From : "you@isp.com",
+      Subject : "This is the subject",
+      Body : "And this is the body"
+  }).then(
+    message => alert(message)
+  );
   }
 });
+
